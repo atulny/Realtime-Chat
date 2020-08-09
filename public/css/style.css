@@ -1,19 +1,42 @@
 body{
 	width: 90%;
 	margin: 0 auto;
-	border: 5px groove #ccc;
+	border: 1px groove #ccc;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.message-info{
+	display: inline-block;
+	width:400px;
+	background-color: #efefef;
 }
 .users{
-	float : right;
 	margin-right: 1.5em;
+}
+.user-info{
+	display: inline-block;
+	width:200px;
 }
 .messages {
 	width: 400px;
 	margin: 1em;
 	border : 1px solid black;
 	padding: 1em;
+	min-height:400px;
+	background-color: #fff;
 }
 .message_form,
 .change_name_form{
 	padding: 1em;
+}
+.message_form input{
+  width:400px;
+
+}
+h5 {margin:1px}
+div[data-reactid=".0"]{
+	background-color: #efefef;;
+}
+div[data-reactid=".0"]> div{
+	display: inline-block;
+	vertical-align: top;
 }

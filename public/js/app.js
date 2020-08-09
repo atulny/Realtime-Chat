@@ -15,7 +15,7 @@ var UsersList = React.createClass({
 			React.createElement(
 				'h3',
 				null,
-				' Online Users '
+				' Participants '
 			),
 			React.createElement(
 				'ul',
@@ -64,7 +64,7 @@ var MessageList = React.createClass({
 			React.createElement(
 				'h2',
 				null,
-				' Conversation: '
+				' .. '
 			),
 			this.props.messages.map(function (message, i) {
 				return React.createElement(Message, {
@@ -103,9 +103,9 @@ var MessageForm = React.createClass({
 			'div',
 			{ className: 'message_form' },
 			React.createElement(
-				'h3',
+				'h5',
 				null,
-				'Write New Message'
+				'Message'
 			),
 			React.createElement(
 				'form',
@@ -142,9 +142,9 @@ var ChangeNameForm = React.createClass({
 			'div',
 			{ className: 'change_name_form' },
 			React.createElement(
-				'h3',
+				'h5',
 				null,
-				' Change Name '
+				' Update Name '
 			),
 			React.createElement(
 				'form',
@@ -260,19 +260,27 @@ var ChatApp = React.createClass({
 		return React.createElement(
 			'div',
 			null,
-			React.createElement(UsersList, {
-				users: this.state.users
-			}),
-			React.createElement(MessageList, {
-				messages: this.state.messages
-			}),
-			React.createElement(MessageForm, {
-				onMessageSubmit: this.handleMessageSubmit,
-				user: this.state.user
-			}),
-			React.createElement(ChangeNameForm, {
-				onChangeName: this.handleChangeName
-			})
+			React.createElement(
+				'div',
+				{ 'class': 'message-info' },
+				React.createElement(MessageList, {
+					messages: this.state.messages
+				}),
+				React.createElement(MessageForm, {
+					onMessageSubmit: this.handleMessageSubmit,
+					user: this.state.user
+				})
+			),
+			React.createElement(
+				'div',
+				{ 'class': 'user-info' },
+				React.createElement(UsersList, {
+					users: this.state.users
+				}),
+				React.createElement(ChangeNameForm, {
+					onChangeName: this.handleChangeName
+				})
+			)
 		);
 	}
 });

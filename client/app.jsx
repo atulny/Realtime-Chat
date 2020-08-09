@@ -80,7 +80,7 @@ var MessageForm = React.createClass({
 	render() {
 		return(
 			<div className='message_form'>
-				<h3>Message</h3>
+				<h5>Message</h5>
 				<form onSubmit={this.handleSubmit}>
 					<input
 						onChange={this.changeHandler}
@@ -111,7 +111,7 @@ var ChangeNameForm = React.createClass({
 	render() {
 		return(
 			<div className='change_name_form'>
-				<h3> Update Name </h3>
+				<h5> Update Name </h5>
 				<form onSubmit={this.handleSubmit}>
 					<input
 						onChange={this.onKey}
@@ -206,19 +206,24 @@ var ChatApp = React.createClass({
 	render() {
 		return (
 			<div>
-				<UsersList
-					users={this.state.users}
-				/>
-				<MessageList
-					messages={this.state.messages}
-				/>
-				<MessageForm
-					onMessageSubmit={this.handleMessageSubmit}
-					user={this.state.user}
-				/>
-				<ChangeNameForm
-					onChangeName={this.handleChangeName}
-				/>
+				
+				<div class="message-info">
+					<MessageList
+						messages={this.state.messages}
+					/>
+					<MessageForm
+						onMessageSubmit={this.handleMessageSubmit}
+						user={this.state.user}
+					/>
+				</div>
+				<div class="user-info">
+					<UsersList
+						users={this.state.users}
+					/>
+					<ChangeNameForm
+						onChangeName={this.handleChangeName}
+					/>
+				</div>
 			</div>
 		);
 	}
