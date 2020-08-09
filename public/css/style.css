@@ -1,7 +1,7 @@
 body{
-	width: 600px;
+	width: 90%;
 	margin: 0 auto;
-	border: 5px solid tomato;
+	border: 5px groove #ccc;
 }
 .users{
 	float : right;
