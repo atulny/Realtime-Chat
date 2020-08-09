@@ -30,6 +30,7 @@ body{
 }
 .message_form input{
   width:400px;
+  padding: 1em;
 
 }
 h5 {margin:1px}
