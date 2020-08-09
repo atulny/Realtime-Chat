@@ -8,7 +8,7 @@ var UsersList = React.createClass({
 	render() {
 		return (
 			<div className='users'>
-				<h3> Online Users </h3>
+				<h3> Participants </h3>
 				<ul>
 					{
 						this.props.users.map((user, i) => {
@@ -40,7 +40,7 @@ var MessageList = React.createClass({
 	render() {
 		return (
 			<div className='messages'>
-				<h2> Conversation: </h2>
+				<h2> .. </h2>
 				{
 					this.props.messages.map((message, i) => {
 						return (
@@ -80,7 +80,7 @@ var MessageForm = React.createClass({
 	render() {
 		return(
 			<div className='message_form'>
-				<h3>Write New Message</h3>
+				<h3>Message</h3>
 				<form onSubmit={this.handleSubmit}>
 					<input
 						onChange={this.changeHandler}
@@ -111,7 +111,7 @@ var ChangeNameForm = React.createClass({
 	render() {
 		return(
 			<div className='change_name_form'>
-				<h3> Change Name </h3>
+				<h3> Update Name </h3>
 				<form onSubmit={this.handleSubmit}>
 					<input
 						onChange={this.onKey}
